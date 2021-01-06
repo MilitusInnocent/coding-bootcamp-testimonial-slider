@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+html {
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    color: hsl(240, 38%, 20%);
+    background-image: url('./images/pattern-bg.svg'), url('./images/pattern-curve.svg'), url('./images/pattern-quotes.svg');
+    background-repeat: no-repeat;
+    background-position: top right, bottom left, top 25% left 25%;
+    background-size: 600px, 500px, 100px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 1900px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    padding: 30px;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+button {
+    cursor: pointer; 
+    color: white;
+    border: none;
+    background-color: white;
+    padding: 0 5px;
+}
+
+.button-icon {
+    float: right;
+    transform: translateY(-50%);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-right: 30%; 
+    width: 80px;
+    height: auto;
+    border-radius: 20px;
+    background-color: white;
+    z-index: 2;
+    box-shadow: 1px 2px 10px rgba(0,0,0,0.4);
+}
+
+img {
+   z-index: -1;
+   box-shadow: 0px 1px 35px rgba(0,0,0,0.07);
+}
+
+button img {
+    width: 70%;
+    padding-bottom: 5px;
+}
+
+.image-container {
+    width: 100%;
+    z-index: -1;
+}
+
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text h4{
+    font-weight: 100;
+    transform: translateX(10%);
+}
+
+.text p {
+    font-weight: 700;
+    margin-top: 30px;
+    transform: translateX(10%);
+}
+
+.text span {
+    color: hsl(240, 18%, 77%);
+    font-weight: 300;
+}
+
+
+.slide2 {
+    display: none;
+}
+
+@media screen and (max-width: 1023px) {
+    .container {
+        transform: scale(0.9);
+        font-size: 20px;
+        background-image: url('./images/pattern-quotes.svg');
+        background-repeat: no-repeat;
+        background-position: top 70% center;
+        background-size: 80px;
+    }
+
+    .button-icon {
+        padding-top: 10px;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    html {
+        background-image: url('./images/pattern-bg.svg'), url('./images/pattern-curve.svg');
+        background-repeat: no-repeat;
+        background-position: top 10% center, bottom left;
+        background-size: 450px, 500px; 
+    }
+
+    body {
+        padding: 30px 0 0 0;
+        text-align: center;
+    }
+
+    .slide {
+        flex-direction: column-reverse;
+        margin-right: auto;
+    }
+
+    img {
+        width: 380px;
+        margin: auto;
+    }
+
+    .image-container {
+        padding-top: 30px;
+    }
+
+    .text h4 {
+        padding-top: 100px;
+        transform: translateX(0);
+    }
+
+    .text p {
+        transform: translateX(0);
+    }
+
+    .button-icon {
+        float: center;
+        transform: translateY(-340px);
+    }
+
+}
